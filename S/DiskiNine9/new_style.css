@@ -61,7 +61,7 @@ button{
 }
 
 h1{
-	font-size: 50px;
+	font-size: 40px;
 	line-height: normal;
 }
 
@@ -70,6 +70,7 @@ h2{
 	margin: 40px;
 	font-size: 40px;
 	line-height: normal;
+	margin-top: 100px;
 }
 
 h3{
@@ -175,7 +176,8 @@ nav p{
 	display: none;
 }
 
-@media(max-width: 1150px){
+@media(max-width: 850px){
+
 	h2{
 		margin-right: 10px;
 		margin-left: 10px;
@@ -186,6 +188,22 @@ nav p{
 		margin-right: 5px;
 		margin-left: 5px;
 	}
+
+	.float{
+		display: block;
+		width: 100%;
+	}
+
+	.float-half{
+		display: block;
+		width: 100%; 
+	}
+
+	.float-three{
+		display: block;
+		width: 100%;
+	}
+
 }
 
 @media(max-width: 1150px){
@@ -238,20 +256,5 @@ nav p{
 	#menu:checked ~ nav ul{
 		display: none;
 	} 
-
-	.float{
-		display: block;
-		width: 100%;
-	}
-
-	.float-half{
-		display: block;
-		width: 100%; 
-	}
-
-	.float-three{
-		display: block;
-		width: 100%;
-	}
 
 }
