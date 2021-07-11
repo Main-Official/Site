@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Social Donars</title>
+</head>
+<style type="text/css">
+	html{
+		scroll-behavior: smooth;
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+	}
+
+	nav ul{
+		background: red; 
+		display: inline-block; 
+		width: 100%; 
+		/*height: 120px;*/
+	}
+	nav ul li{
+		display: inline-block;
+		cursor: pointer;
+		color: white;
+		padding: 10px;
+		padding-top: 50px;
+		font-size: 25px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	ul h1,h2{
+		display: inline-block;
+		color: white;
+		/*font-size: 50px;*/
+		margin-right: 20px;
+	}
+
+	nav{
+		display: block; 
+		width: 100%;
+	}
+
+	div{
+		width: 50%;
+		margin-top:20px;
+		margin-bottom: 20px;
+		padding: 20px;
+	}
+
+	input{
+		margin:10px;
+		padding: 20px;
+	}
+
+</style>
+<body>
+	<nav>
+		<ul>
+			<a href="index.html"><h1>Social Donars</h1></a>
+			<h2>Register page</h2>
+		</ul>
+	</nav>
+	<center>
+
+		<form action='load.php' method='post' enctype='multipart/form-data'>
+			<ul>
+				<li><input type='text'  placeholder='Name' name=''></li>
+				<li><input type='text'  placeholder='Surname' name=''></li>
+				<li><input type='text'  placeholder='Email' name=''></li>
+				<li><input type='file' name='img' accept='image/*'></li>
+				<li><button id="capture">Capture</button></li><br>
+				<video id="player" controls autoplay></video>
+				<li><canvas id="canvas" width=320 height=40></canvas></li>
+				<script>
+					const player = document.getElementById('player');
+					const canvas = document.getElementById('canvas');
+					const context = canvas.getContext('2d');
+					const captureButton = document.getElementById('capture');
+
+					const constraints = {
+						video: true,
+					};
+
+					captureButton.addEventListener('click', () => {
+   					// Draw the video frame to the canvas.
+   					context.drawImage(player, 0, 0, canvas.width, canvas.height);
+   				});
+
+			  			// Attach the video stream to the video element and autoplay.
+			  			navigator.mediaDevices.getUserMedia(constraints)
+			  			.then((stream) => {
+			  				player.srcObject = stream;
+			  			});
+			  		</script>
+				<li><input type="radio" name="gender">Male</li>
+				<li><input type="radio" name="gender">Female</li>
+			  	</ul>
+			  </form>
+			  <footer>
+			  	<li><input type='submit' value='Save'></li>
+			  	<a href="Register.html">Login or Register</a>
+			  	<p>&copy; Social Donars</p>
+			  </footer>
+			</center>
+
+		</body>

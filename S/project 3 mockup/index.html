@@ -5,6 +5,9 @@
 	<title>Social Donars</title>
 </head>
 <style type="text/css">
+	html{
+		scroll-behavior: smooth;
+	}
 	body{
 		margin: 0px;
 		padding: 0px;
@@ -29,7 +32,8 @@
 	ul h1{
 		display: inline-block;
 		color: white;
-		font-size: 20px;
+		font-size: 50px;
+		margin-right: 20px;
 	}
 
 	table{
@@ -48,7 +52,7 @@
 	}
 
 	h1{
-		font-size: 50px;
+		
 		text-align: center;
 	}
 
@@ -60,9 +64,22 @@
 
 	div{
 		width: 50%;
+		margin-top:20px;
+		margin-bottom: 20px;
+		padding: 20px;
 	}
 	input{
 		margin:15px;
+	}
+
+	div h2,h3{
+		color: red;
+	}
+
+	div a{
+		padding: 10px;
+		background-color: red;
+		color: white;
 	}
 
 	.first_logo{
@@ -73,8 +90,10 @@
 	.find_donating{
 		background-color: red;
 		color: white;
-		height: 60px;
+		/*height: 60px/;*/
 		padding-top: 20px;
+		padding-bottom: 20px;
+		/*padding-bottom: 0px;*/
 		margin: 0px;
 	}
 
@@ -157,10 +176,10 @@
 	<nav>
 		<ul>
 			<h1>Social Donars</h1>
-			<li>Blood types</li>
-			<li>About dBlood</li>
-			<li>Blood drive</li>
-			<li>Blood drive</li>
+			<a href="register.html"><li style=" background-color: white; color: red;">Register Now</li></a>
+			<a href="#blood types"><li>Blood types</li></a>
+			<a href="#about blood"><li>About blood</li></a>
+			<a href="#host blood drive"><li>Host blood drive</li></a>
 			<li><input type="text" placeholder="search" name=""></li>
 			<li>Log in</li>
 		</ul>
@@ -345,5 +364,58 @@
 			<p>When you are mindful of what is happening right now, this allows your natural state of happiness to arise.</p>
 			<input type="button" class="b_button" name="" value="sign out" style="background-color: grey;">
 		</div>
-	</center>
+
+		<div style="border: solid; width: 80%; border-width: 20px; border-color: red;">
+			<h3 id="about blood">Blood groups</h3>
+			<p>There are 4 main blood groups (types of blood) – A, B, AB and O. Your blood group is determined by the genes you inherit from your parents.
+
+			Each group can be either RhD positive or RhD negative, which means in total there are 8 blood groups.</p>
+
+			<h3>Antibodies and antigens</h3>
+			<p>Blood is made up of red blood cells, white blood cells and platelets in a liquid called plasma. Your blood group is identified by antibodies and antigens in the blood.
+
+				Antibodies are proteins found in plasma. They're part of your body's natural defences. They recognise foreign substances, such as germs, and alert your immune system, which destroys them.
+
+			Antigens are protein molecules found on the surface of red blood cells.</p>
+
+			<h3 id="blood types">The ABO system</h3>
+			<p>There are 4 main blood groups defined by the ABO system:
+
+				blood group A – has A antigens on the red blood cells with anti-B antibodies in the plasma
+				blood group B – has B antigens with anti-A antibodies in the plasma
+				blood group O – has no antigens, but both anti-A and anti-B antibodies in the plasma
+				blood group AB – has both A and B antigens, but no antibodies
+				Blood group O is the most common blood group. Almost half of the UK population (48%) has blood group O.
+
+				Receiving blood from the wrong ABO group can be life threatening. For example, if someone with group B blood is given group A blood, their anti-A antibodies will attack the group A cells.
+
+				This is why group A blood must never be given to someone who has group B blood and vice versa.
+
+				As group O red blood cells do not have any A or B antigens, it can safely be given to any other group.
+
+			The NHS Blood and Transplant (NHSBT) website has more information about the different blood groups.</p>
+
+			<a href="https://www.nhs.uk/conditions/blood-groups/#:~:text=There%20are%204%20main%20blood,there%20are%208%20blood%20groups."> Learn more</a>
+
+			<h3 id="host blood drive">Host a blood drive</h3>
+			<p><strong> SANBS aims to collect an average of 3000 units of blood every day nationally. It is through planned, sustainable blood drives at companies, organisations and institutions that we are able to achieve this collection target.<br><br>
+
+			What are the benefits of hosting a blood drive?</strong>
+			Blood drives gives donors the opportunity to become involved in making a difference to others in a convenient way.
+			SANBS offers education for your staff on safe lifestyles and requirements to qualify to be a blood donor. An added benefit for your organisation is that the Donor Educator covers important information such as sexually transmitted diseases.
+			Blood drives are used by many companies as a Corporate Social Investment activity to show that they are actively involved in impacting on the lives of South Africans.
+			Each blood donation contributes significantly to the country’s health care system.
+			Blood drives can be used as team building exercises where departments or branches compete to see who donates the most blood, which could ultimately boost staff morale.
+			Things to consider when hosting a blood drive
+			A target goal (number of donors) and a plan to meet that goal.
+			A suitable and accessible venue.
+		Time to meet with your SANBS Public Relations Practitioner (PRP) to evaluate the blood drive and discuss scheduling future drives, challenges and/or suggestions.</p>
+
+		<a href="https://sanbs.org.za/blood-drives"> Learn more</a>
+	</div>
+	<footer>
+		<a href="Register.html">Login or Register</a>
+		<p>&copy; Social Donars</p>
+	</footer>
+</center>
 </body>
